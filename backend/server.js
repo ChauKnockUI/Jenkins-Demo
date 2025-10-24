@@ -18,7 +18,7 @@ app.use((req, res, next) => {
 });
 
 mongoose.connect(
-  "mongodb+srv://hohaichau963_db_user:Q0VfatsT6PMbxVvV@cluster0.fkgifsd.mongodb.net/",
+  process.env.MONGODB_URI,
   {
 	useNewUrlParser: true,
 	useUnifiedTopology: true
