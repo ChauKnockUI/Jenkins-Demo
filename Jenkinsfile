@@ -6,7 +6,7 @@ pipeline {
         NODE_ENV = 'production'
     }
     triggers {
-        pollSCM('H/1 * * * *')
+        pollSCM('* * * * *')
     }
     stages {
         stage('Build') {
