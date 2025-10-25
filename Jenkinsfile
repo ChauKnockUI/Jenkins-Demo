@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building backend and frontend Docker images...'
-                sh 'docker-compose build'
+                bat 'docker-compose build'
             }
         }
 
@@ -18,8 +18,8 @@ pipeline {
         stage('Deliver') {
             steps {
                 echo 'Deploying application...'
-                sh 'docker-compose down'
-                sh 'docker-compose up -d'
+                bat 'docker-compose down'
+                bat 'docker-compose up -d'
             }
         }
     }
