@@ -2,6 +2,8 @@ const express = require("express");
 const mongoose = require("mongoose");
 const foodRouter = require("./routes/foodRoutes.js");
 
+require('dotenv').config();
+
 const app = express();
 app.use(express.json());
 
