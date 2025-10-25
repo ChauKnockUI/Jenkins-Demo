@@ -2,6 +2,8 @@ pipeline {
     agent any
     environment {
         MONGODB_URI = credentials('mongodb-uri')
+        PORT = '5000'
+        NODE_ENV = 'production'
     }
     triggers {
         pollSCM('H/1 * * * *')
