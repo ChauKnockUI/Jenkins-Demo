@@ -77,4 +77,4 @@ Dự án đã được cập nhật để tương thích với Node.js 22:
 - Sửa lỗi trong backend routes
 - Thêm CORS support
 
-##  Test CI/CD
+##  Test automatically build
