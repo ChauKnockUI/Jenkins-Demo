@@ -1,6 +1,11 @@
 pipeline {
     agent any
-
+    environment {
+        MONGODB_URI = credentials('mongodb-uri')
+    }
+    triggers {
+        pollSCM('H/1 * * * *')
+    
     stages {
         stage('Build') {
             steps {
@@ -18,7 +23,7 @@ pipeline {
         stage('Deliver') {
             steps {
                 echo 'Deploying application...'
-                bat 'docker-compose down'
+                bat 'docker-compose down -v'
                 bat 'docker-compose up -d'
             }
         }
